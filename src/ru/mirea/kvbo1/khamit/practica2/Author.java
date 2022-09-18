@@ -1,4 +1,4 @@
-package ru.mirea.kvbo1.khamit;
+package ru.mirea.kvbo1.khamit.practica2;
 
 public class Author {
     private String name;

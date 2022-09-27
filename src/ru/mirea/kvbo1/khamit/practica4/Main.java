@@ -1,6 +1,7 @@
 package ru.mirea.kvbo1.khamit.practica4;
 
 public class Main {
+
     public static void best_season(Sesons s) {
         switch (s) {
             case Autumn -> System.out.println("Я люблю осень");
@@ -13,7 +14,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-       Sesons[] a=Sesons.values();
+
+
+        Sesons[] a=Sesons.values();
        for(Sesons i:a){
            System.out.println(i + " " + i.getTemp());
            i.getDescription();

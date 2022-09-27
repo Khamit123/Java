@@ -10,8 +10,7 @@ public class Circle {
         this.radius = radius;
     }
 
-    @Override
-    @Deprecated
+
     public String toString() {
         return "Circle{" +
                 "radius=" + radius +

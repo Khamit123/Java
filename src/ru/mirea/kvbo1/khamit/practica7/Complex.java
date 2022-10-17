@@ -1,4 +1,4 @@
-package ru.mirea.kvbo1.khamit;
+package ru.mirea.kvbo1.khamit.practica7;
 
 public class Complex implements Comparable<Complex>{
     private double Im;

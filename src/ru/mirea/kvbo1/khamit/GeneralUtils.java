@@ -1,5 +1,6 @@
 package ru.mirea.kvbo1.khamit;
-
+import java.util.Random;
+import java.util.random.*;
 import ru.mirea.kvbo1.khamit.practica10.Student1;
 
 public class GeneralUtils {
@@ -65,5 +66,18 @@ public class GeneralUtils {
             }
         }
     }
-
+public static void fillArr(int[] a){
+        for (int k=0;k<a.length;k++){
+            Random rand =new Random();
+            a[k]= rand.nextInt(10000,99999);
+        }
+}
+public static boolean searchInArr(int []arr,int isk){
+        for(int i :arr){
+            if (isk==i){
+                return true;
+            }
+        }
+        return false;
+}
 }

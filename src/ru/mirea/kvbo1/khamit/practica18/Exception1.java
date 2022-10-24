@@ -1,4 +1,4 @@
-package ru.mirea.kvbo1.khamit.practica11;
+package ru.mirea.kvbo1.khamit.practica18;
 import java.util.Scanner;
 
 public class Exception1 {
@@ -12,8 +12,15 @@ public class Exception1 {
             int i = Integer.parseInt(intString);
             System.out.println(2 / i);
         }
-        catch (NumberFormatException e) {
+        catch (Exception e) {
                 System.out.println("invalid format");
             }
+    }
+    class ThrowsDemo {
+        public static void getDetails(String key) {
+            if(key == null) {
+                throw new NullPointerException("null key in getDetails" );
+            }
+        }
     }
 }

@@ -12,10 +12,10 @@ public class Main {
         try{
             int a=sc.nextInt();
             if(!GeneralUtils.searchInArr(INNarr,a)){
-                throw new Exception();
+                throw new InvalidInnExeption();
             }
         }catch(Exception e){
-            throw new Exception("ИНН не действителен");
+            throw new InvalidInnExeption("ИНН не действителен");
         }
 
     }

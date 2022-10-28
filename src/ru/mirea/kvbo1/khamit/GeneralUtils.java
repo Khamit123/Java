@@ -80,4 +80,15 @@ public static boolean searchInArr(int []arr,int isk){
         }
         return false;
 }
-}
+    public static void printArr2(Integer [][]a){
+        for (int k = 0; k < a.length; k++) {
+            for (int i = 0; i < a[0].length; i++) {
+                System.out.print(a[k][i]);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    }
+
+

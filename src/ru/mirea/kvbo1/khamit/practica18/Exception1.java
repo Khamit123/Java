@@ -12,9 +12,12 @@ public class Exception1 {
             int i = Integer.parseInt(intString);
             System.out.println(2 / i);
         }
-        catch (Exception e) {
+        catch (NullPointerException e) {
                 System.out.println("invalid format");
             }
+        catch (ArithmeticException e){
+            System.out.println("divide by zero");
+        }
     }
     class ThrowsDemo {
         public static void getDetails(String key) {

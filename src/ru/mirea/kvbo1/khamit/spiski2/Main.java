@@ -3,14 +3,14 @@ package ru.mirea.kvbo1.khamit.spiski2;
 public class Main {
     public static void main(String[] args) {
 
-        MyTwoLinkedList n = new MyTwoLinkedList();
+        MyTwoLinkedList<Integer> n = new MyTwoLinkedList<>();
         n.add(2);
         n.add(5);
         n.add(3);
         n.add(1);
-        n.add(10);
+        n.add(2);
         n.add(7);
-        System.out.println(n.get(1));
+        System.out.println(n);
         for (int y = 1; y < n.getListCount()+1; y++) {
             int index = y;
             int a=0;

@@ -1,32 +1,32 @@
 package ru.mirea.kvbo1.khamit.spiski2;
 
-public class Node {
-    Object data;
+public class Node<E> {
+    E data;
     Node next;
     Node prev;
-    public Node(Object dataValue){
+    public Node(E dataValue){
         next = null;
         data = dataValue;
         prev=null;
     }
-    public Node(Object dataValue, Node nextValue, Node prevValue){
+    public Node(E dataValue, Node nextValue, Node prevValue){
         next = nextValue;
         data = dataValue;
         prev=prevValue;
     }
 
-    public Node(Object dataValue, Node nextValue){
+    public Node(E dataValue, Node nextValue){
         next = nextValue;
         data = dataValue;
     }
-    public Object getData() { return data; }
-    public void setData(Object dataValue) {
+    public E getData() { return data; }
+    public void setData(E dataValue) {
         data = dataValue;
     }
-    public Node getPrev(){return prev;}
-    public Node getNext() { return next; }
-    public void setNext(Node nextValue) { next = nextValue; }
-    public void setPrev(Node prevValue){prev=prevValue;}
+    public Node<E> getPrev(){return prev;}
+    public Node<E> getNext() { return next; }
+    public void setNext(Node<E> nextValue) { next = nextValue; }
+    public void setPrev(Node<E> prevValue){prev=prevValue;}
     @Override
     public String toString() {
         String output ="";
@@ -34,9 +34,9 @@ public class Node {
         return output;
     }
 }
-class MyTwoLinkedList {
-    private Node tail;
-    private Node head;
+class MyTwoLinkedList<E> {
+    private Node<E> tail;
+    private Node<E> head;
     private int listCount;
 
     public int getListCount() {
@@ -48,17 +48,17 @@ class MyTwoLinkedList {
         tail = head;
         listCount = 0;
     }
-    public void add(Object data){
-        Node tmp = new Node(data);
-        Node current = tail;
+    public void add(E data){
+        Node<E> tmp = new Node<E>(data);
+        Node<E> current = tail;
         tail.setNext(tmp);
         tail=tail.getNext();
         tail.setPrev(current);
         listCount++;
     }
-    public void add(Object data, int index){
-        Node tmp = new Node(data);
-        Node current = head;
+    public void add(E data, int index){
+        Node<E> tmp = new Node<E>(data);
+        Node<E> current = head;
         for (int i=1; i<index && current.getNext() != null; i++){
             current = current.getNext();
         }
@@ -67,18 +67,20 @@ class MyTwoLinkedList {
         tmp.setPrev(current);
         listCount++;
     }
-    public Object get(int index){
-        if (index <= 0) return null;
-        Node current = head.getNext();
+    public E get(int index){
+        if (index <= 0 || index>listCount) return null;
+        Node<E> current = head.getNext();
         for (int i = 1; i < index; i++){
             if (current.getNext() == null) return null;
             current = current.getNext();
         }
         return current.getData();
     }
-    public boolean remove(int index){
-        if (index < 1 && index > size()) return false;
-        Node current = head;
+    public boolean remove(int index) throws EmptyListException {
+        if (index < 1 || index > size()) {
+            throw new EmptyListException();
+        }
+        Node<E> current = head;
         for (int i =1; i < index; i++){
             if (current.getNext() == null) return false;
             current = current.getNext();
@@ -90,7 +92,7 @@ class MyTwoLinkedList {
     public int size(){ return listCount; }
     @Override
     public String toString() {
-        Node current = head.getNext();
+        Node<E> current = head.getNext();
         String output = "";
         while (current != null){
             output+="["+current.getData().toString()+"]";

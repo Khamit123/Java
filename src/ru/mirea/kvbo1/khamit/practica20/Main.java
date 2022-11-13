@@ -1,11 +1,6 @@
 package ru.mirea.kvbo1.khamit.practica20;
 
-import ru.mirea.kvbo1.khamit.GeneralUtils;
-
-import java.util.Arrays;
 import java.util.Random;
-
-import static java.util.Random.*;
 
 public  class Main {
     public static void main(String[] args) {

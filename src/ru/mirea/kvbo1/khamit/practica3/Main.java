@@ -1,6 +1,6 @@
 package ru.mirea.kvbo1.khamit.practica3;
 
-import ru.mirea.kvbo1.khamit.GeneralUtils;
+import ru.mirea.kvbo1.khamit.GeneralsUtil.GeneralUtils;
 
 import java.util.Arrays;
 import java.util.Random;

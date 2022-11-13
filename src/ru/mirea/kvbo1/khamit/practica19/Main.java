@@ -1,6 +1,6 @@
 package ru.mirea.kvbo1.khamit.practica19;
 
-import ru.mirea.kvbo1.khamit.GeneralUtils;
+import ru.mirea.kvbo1.khamit.GeneralsUtil.GeneralUtils;
 import java.util.Scanner;
 
 public class Main {

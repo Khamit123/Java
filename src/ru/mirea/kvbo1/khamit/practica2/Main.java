@@ -1,10 +1,5 @@
 package ru.mirea.kvbo1.khamit.practica2;
 
-import ru.mirea.kvbo1.khamit.GeneralUtils;
-
-import java.util.Arrays;
-import java.util.Random;
-
 public class Main {
     public static void swap(double a,double b){
         double r=a;

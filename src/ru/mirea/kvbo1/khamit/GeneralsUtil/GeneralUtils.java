@@ -1,6 +1,6 @@
-package ru.mirea.kvbo1.khamit;
+package ru.mirea.kvbo1.khamit.GeneralsUtil;
 import java.util.Random;
-import java.util.random.*;
+
 import ru.mirea.kvbo1.khamit.practica10.Student1;
 
 public class GeneralUtils {
@@ -90,5 +90,6 @@ public static boolean searchInArr(int []arr,int isk){
         System.out.println();
     }
     }
+
 
 
